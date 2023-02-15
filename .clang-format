@@ -1,3 +1,4 @@
 AllowShortFunctionsOnASingleLine: "Empty"
 AllowShortBlocksOnASingleLine: "Empty"
 AllowShortCaseLabelsOnASingleLine: false
+ColumnLimit: 120
