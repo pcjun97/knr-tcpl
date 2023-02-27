@@ -1,6 +1,6 @@
-#define MAXCHAR 256
+#include <limits.h>
 
-int isuppercache[MAXCHAR];
+int isuppercache[UCHAR_MAX + 1];
 int isuppercacheinit = 0;
 
 /* saves space */
@@ -12,7 +12,7 @@ int sisupper(int c) {
 int tisupper(int c) {
   int i;
   if (!isuppercacheinit) {
-    for (i = 0; i < MAXCHAR; i++)
+    for (i = 0; i <= UCHAR_MAX; i++)
       isuppercache[i] = sisupper(i);
     isuppercacheinit = 1;
   }
